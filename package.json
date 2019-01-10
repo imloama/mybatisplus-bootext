@@ -1,0 +1,33 @@
+{
+  "name": "mybatisplus-bootext",
+  "version": "0.0.1",
+  "description": "mybatisplus ext lib for spring-boot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imloama/mybatisplus-bootext.git"
+  },
+  "keywords": [
+    "springboot",
+    "mybatis",
+    "mybatisplus",
+    "redis"
+  ],
+  "author": "imloama",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/imloama/mybatisplus-bootext/issues"
+  },
+  "homepage": "https://github.com/imloama/mybatisplus-bootext#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
