@@ -1,5 +1,7 @@
 # 基于mybatis-plus，结合spring-boot，依赖redis作缓存，只需要建表，新建model mapper和service即可
 
+项目代码主体实现拷贝来自于[Crown](https://gitee.com/cancerGit/Crown)，因原项目依赖内容较多，为了代码复用方便才做的这个项目
+
 使用示例
 -------
 
