@@ -10,7 +10,6 @@ import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
 import com.baomidou.mybatisplus.core.toolkit.support.SerializedLambda;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import com.github.imloama.mybatisplus.bootext.config.BootExtConfigProperties;
-import com.github.imloama.mybatisplus.bootext.utils.Snowflake;
 import com.google.common.collect.Maps;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.session.SqlSession;
@@ -49,9 +48,6 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseModel> imple
 
     @Autowired
     private CacheManager cacheManager;
-
-    @Autowired
-    private Snowflake snowflake;
 
     @Autowired
     private BootExtConfigProperties config;
