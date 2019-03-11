@@ -69,7 +69,7 @@ public class RedisCachingConfig extends CachingConfigurerSupport {
         反解析就会报com.alibaba.fastjson.JSONException: autoType is not support的异常
         可参考 https://blog.csdn.net/u012240455/article/details/80538540
          */
-        ParserConfig.getGlobalInstance().addAccept("io.fchain.developers.");
+        ParserConfig.getGlobalInstance().setAutoTypeSupport(true); 
         return cacheManager;
     }
 
