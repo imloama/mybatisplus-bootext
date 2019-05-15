@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import org.springframework.cache.Cache;
 
@@ -21,7 +22,7 @@ import java.util.function.Function;
  *
  * @author Caratacus
  */
-public interface BaseService<T extends Convert> {
+public interface BaseService<T extends BaseModel> extends IService<T> {
 
     public Cache getCache();
 

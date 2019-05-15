@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.core.metadata.TableInfo;
 import com.baomidou.mybatisplus.core.toolkit.*;
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
 import com.baomidou.mybatisplus.core.toolkit.support.SerializedLambda;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import com.github.imloama.mybatisplus.bootext.config.BootExtConfigProperties;
 import com.google.common.collect.Maps;
@@ -36,7 +37,7 @@ import java.util.stream.Collectors;
  * @author Caratacus
  */
 //@Transactional(readOnly = true)
-public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseModel> implements BaseService<T> {
+public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseModel> extends ServiceImpl<M,T> implements BaseService<T> {
 
 
     @Autowired
@@ -65,7 +66,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseModel> imple
     }
 
     protected Class<T> currentModelClass() {
-        return ReflectionKit.getSuperClassGenericType(getClass(), 1);
+        return (Class<T>) ReflectionKit.getSuperClassGenericType(getClass(), 1);
     }
 
     /**
