@@ -1,11 +1,10 @@
 
 buildscript {
     ext {
-        springBootVersion = '2.1.1.RELEASE'
+        springBootVersion = '2.1.5.RELEASE'
     }
     repositories {
         mavenLocal()
-        maven{ url 'https://maven.aliyun.com/repository/public' }
         maven{ url 'https://jitpack.io' }
         mavenCentral()
     }
@@ -24,12 +23,12 @@ apply plugin: 'io.spring.dependency-management'
 
 
 group = 'com.github.imloama'
-version = '0.0.4'
+version = '0.0.5'
 sourceCompatibility = 1.8
 
 
 repositories {
-	maven {url "http://maven.aliyun.com/nexus/content/groups/public/"}
+	mavenLocal()
 	maven{url 'https://jitpack.io'}
 	mavenCentral()
 }
